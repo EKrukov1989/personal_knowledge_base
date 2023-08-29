@@ -1,0 +1,6 @@
+- [ ] Gilbert Strang - Introduction to linear algebra (MIT)
+- [x] CppCon 2014: Jon Kalb - Exception-safe-code
+- [x] Артем Навроцкий - Курс по базам данных
+- [ ] Константин Владимиров - C++ базовый курс
+- [ ] Константин Владимиров - C++ магистерский курс
+- [ ] Глубокое погружение в Linux namespaces https://habr.com/ru/articles/458462/

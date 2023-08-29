@@ -1,0 +1,86 @@
+*(Список тем, которые неплохо бы изучить)*
+
+### темы для ознакомления
+
+- [x] URI/URL/URN
+- [x] certificates
+- [x] sftp
+- [x] scp
+- [x] ssh
+- [x] source
+- [ ] find
+- [x] python venv
+- [ ] command colon
+- [ ] command cat
+- [x] command tr
+- [ ] command head
+- [x] command cut
+- [ ] command date
+- [ ] command seq
+- [ ] command yes
+- [ ] command true and false
+- [ ] cpp integer promotions
+- [ ] two's complement
+- [ ] gtest
+- [ ] docker debug
+- [x] mkdir
+- [x] rm + rmdir
+- [x] shred - только ознакомление
+- [ ] remote desktop
+- [x] globbing
+- [x] regex
+- [ ] vpn - ознакомление
+- [x] http-redirect
+- [ ] cgi и cgi-скрипты
+- [ ] что же такое www
+- [ ] wifi lan practice
+- [ ] file locking system
+- [ ] command top
+- [x] транспортный уровень
+- [x] netstat - вмсето рассмотрена утилита ip
+- [x] ifconfig - вместо рассмотрена утилита ip
+- [x] ARP
+- [ ] sendmail
+- [ ] как правильно проверять хэшсумму программ?
+- [x] curl
+- [x] netplan
+- [x] ufw
+- [x] printf
+- [x] iptables
+- [x] hostname
+- [x] route - вместо рассмотрена утилита ip
+- [x] ip
+- [x] traceroute
+- [ ] command whois
+- [x] tcpdump
+- [x] systemd
+- [x] systemctl
+- [x] journalctl
+- [ ] syncthing - ознакомление
+- [ ] apache & nginx - ознакомление
+- [ ] letsencrypt - ознакомление
+- [ ] zta
+- [ ] sanitizer
+- [ ] valgrind
+- [ ] нагрузочное тестирование
+- [ ] python 'with' construction
+- [ ] REST-API
+
+### практические работы
+- [ ] check C++20 features
+- [ ] C++ http-requests and websocket
+- [x] std::regex
+- [ ] precompiled headers
+- [ ] camera and tracker
+- [ ] fiddler
+- [ ] C++ type-deduction
+
+### алгоритмы для изучения
+- [ ] транзакции
+- [ ] qsort
+- [ ] mergesort
+- [ ] heapsort
+- [ ] алгоритм Дайкстры
+- [ ] prefix tree
+- [ ] segment tree
+- [ ] binary index tree
