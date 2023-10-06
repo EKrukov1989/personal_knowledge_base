@@ -1,4 +1,6 @@
 ___
+В данной статье весьма поверхностно рассматриваются самые необходимые команды для управления базами данных.
+___
 ### 1. Установка
 
 Как установить и настроить MySQL на Ubuntu 20.04: [digitalocean.com](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04)
@@ -132,15 +134,10 @@ SHOW INDEXES table_name;
 # Удалить таблицу:
 DROP TABLE table_name;
 
-# Создать таблицу (пример):
-CREATE TABLE translations (
-    id SERIAL,
-    word VARCHAR(256) NOT NULL,
-    trans VARCHAR(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-);
+CREATE TABLE [IF NOT EXISTS] table_name (<create_definition>);
 ```
 
-Директивы `CREATE TABLE` и `ALTER TABLE` разобраны в отдельной статье:
-- [[mysql - scheme]]
-
+Директивы `CREATE TABLE` и `ALTER TABLE`, разобраны отдельно:
+- [[mysql - create]]
+- [[mysql - alter table]]
 
