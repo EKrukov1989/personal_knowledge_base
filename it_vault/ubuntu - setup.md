@@ -29,6 +29,7 @@ ln -s /media/gene /home/gene/flashdrives
 - install yandex browser
 - install obsidian
 - lxd (?)
+- cmake (?)
 - wireshark (?)
 - visual studio code + настройка -> [[vscode - setup]]
 - install and setup git -> [[git - global setup]]
@@ -44,6 +45,7 @@ alias printpath="echo $PATH | sed 's/:/\n/g'"
 alias brls="ls -1AN --group-directories-first"
 alias fuls="ls -AhLN --group-directories-first"
 alias printaslines="printf '[%s]\n'"
+alias psaq="sudo docker ps -aq"
 ```
 
 ___
