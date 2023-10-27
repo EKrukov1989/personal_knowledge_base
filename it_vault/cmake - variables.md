@@ -26,6 +26,13 @@ ${final_${varname}}
 set(arr abc def ghi)
 set(arr abc;def;ghi)
 ```
+
+При разыменовании списка нужно помнить, что:
+```
+set(arr a b c)
+message(STATUS ${arr}   ) # output: abc
+message(STATUS "${arr}" ) # output: a;b;c
+```
 ___
 ### 2. Переменные окружения
 
