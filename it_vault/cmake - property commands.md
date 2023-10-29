@@ -86,6 +86,15 @@ get_property( resultVar entitySpecific PROPERTY propName FULL_DOCS  )
 ```
 - получить краткое или полное описание свойства
 - нужно указать только тип сущности
+
+**_Получение типа кэш-переменной:**_
+```
+get_property( resultVar CACHE PROPERTY cachevaname TYPE )
+```
+
+>[!note]
+>Важно отметить, что установленные однажды свойства необязательно должны быть видимы по всему проекту. Например свойства установленные для `DIRECTORY` - будут видны в других областях видимости, а `SOURCE` - только в той директории в которой свойство установлено.
+
 ___
 ### 3. set_property()
 
@@ -110,3 +119,52 @@ CACHE var1 var2 ...
 - Если опций не указано, то по умолчанию значение будет заменено
 - Если указано `APPEND`, то указанное значение будет добавлено как элемент списка
 - Если указано `APPEND_STRING`, то указанное значение будет конкатенировано к уже существующему
+
+___
+### 4. get_cmake_property()
+
+С помощью команды `get_cmake_property()` можно получить значение свойства, которое относится к классу `GLOBAL`:
+`get_cmake_property(res name)` <=> `get_property(res GLOBAL PROPERTY name)`
+
+Кроме того, есть куда более полезное применение для этой команды:
+- можно получить список следующих элементов:
+- `get_cmake_property(res VARIABLES)`
+- `get_cmake_property(res CACHE_VARIABLES)`
+- `get_cmake_property(res COMMANDS)`
+- `get_cmake_property(res MACROS)`
+- `get_cmake_property(res COMPONENTS)`
+
+___
+### 5. Синтаксический сахар
+
+Cmake предлагает набор команд, которые позволяют заменить `set_property` и `get_property` в ряде случаев. Зачастую это просто синтаксический сахар.
+
+**_DIRECTORY**_
+```
+set_directory_properties(PROPERTIES prop1 val1 [prop2 val2 ...])
+get_directory_property(resultVar [DIRECTORY dir] property)
+```
+
+Но есть одна особенность: с помощью этой команды можно получить значение переменной в другой области видимости.
+```
+get_directory_property(resultVar [DIRECTORY dir] DEFINITION varName)
+```
+>[!tip] Лучше такой возможностью никогда не пользоваться.
+
+**_TARGET**_
+```
+set_target_properties(target1 [target2...] PROPERTIES
+					  propertyName1 value1
+					  [propertyName2 value2] ... )
+
+get_target_property(resultVar target propertyName)
+```
+
+**_SOURCE**_
+```
+set_source_files_properties(file1 [file2...] PROPERTIES
+							propertyName1 value1
+							[propertyName2 value2] ... )
+
+get_source_file_property(resultVar sourceFile propertyName)
+```
