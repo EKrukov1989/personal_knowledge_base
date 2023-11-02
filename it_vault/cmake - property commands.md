@@ -168,3 +168,18 @@ set_source_files_properties(file1 [file2...] PROPERTIES
 
 get_source_file_property(resultVar sourceFile propertyName)
 ```
+
+___
+### 6. Вывод свойств
+
+Можно вывести свойства с помощью встроенного модуля `CMakePrintHelpers`:
+```
+include(CMakePrintHelpers) # подключаем модуль
+
+cmake_print_properties([TARGETS target1 [target2...]]
+	[SOURCES source1 [source2...]]
+	[DIRECTORIES dir1 [dir2...]]
+	[TESTS test1 [test2...]]
+	[CACHE_ENTRIES var1 [var2...]]
+	PROPERTIES property1 [property2...]
+```
