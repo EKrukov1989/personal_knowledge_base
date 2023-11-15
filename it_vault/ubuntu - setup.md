@@ -24,6 +24,7 @@ sudo apt-get install veracrypt
 sudo apt-get install kolourpaint
 sudo snap install telegram-desktop
 ln -s /media/gene /home/gene/flashdrives
+sudo apt install libreoffice libreoffice-gnome
 ```
 Кроме того:
 - install yandex browser
