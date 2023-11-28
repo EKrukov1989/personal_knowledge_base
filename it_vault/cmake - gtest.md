@@ -1,6 +1,7 @@
 ___
 В данной статье рассматриваются способы подключения и использования gtest с помощью cmake. Подключение с помощью make рассмотрено здесь: [[gtest - testapp]].
-### Пример подключения как импортной библиотеки:
+___
+### 1. Подключение как импортной библиотеки:
 
 Структура проекта:
 ```
@@ -94,3 +95,34 @@ cmake ../
 cmake --build . --target testapp
 ./testapp
 ```
+
+___
+### 2. Подключение с помощью FindGTest-модуля
+
+Предварительно нужно:
+- скачать gtest с github
+- собрать gtest
+- установить gtest с помощью make install
+
+В cmake можно создать тестовое приложение и добавить в него кейсы следующим образом:
+```cmake
+enable_testing()
+add_executable(testapp test.cpp)
+find_package(GTest REQUIRED)
+target_link_libraries(testapp PRIVATE GTest::gtest GTest::gtest_main)
+add_test(NAME testapp COMMAND testapp)
+```
+
+В этом случае все тест-кейсы, которые будут найдены в `test.cpp` (и  других файлах) будут собраны в одно приложение `testapp`. При запуске `ctest` они будут отображаться как один тест.
+
+Можно добавить все тесты в приложение по отдельности с помощью `gtest_add_tests`:
+```
+enable_testing()
+add_executable(testapp test.cpp)
+find_package(GTest REQUIRED)
+target_link_libraries(testapp PRIVATE GTest::gtest GTest::gtest_main)
+gtest_add_tests(testapp "" test.cpp)
+```
+
+
+
