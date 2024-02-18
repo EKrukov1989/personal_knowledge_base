@@ -59,6 +59,10 @@ venv_dir_basename="venv"
 this_script_dir=$(dirname "$PWD/$0")
 source "$this_script_dir/$venv_dir_basename/bin/activate"
 ```
+
+>[!tip]
+>Чтобы использовать этот скрипт нужно выполнить команду `. act` или `source act`
+
 4. Создать в папке проекта пустой файл `requirements.txt`
 5. При каждом изменении состава пэккаджей обновлять файл `requirements.txt` с помощью команды:
 ```bash
