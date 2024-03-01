@@ -10,8 +10,8 @@ ___
 
 Обязательные настройки имени и почты:
 ```
-`git config --global user.name "John Doe"`
-`git config --global user.email johndoe@example.com`
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
 ```
 
 Отключить предупреждение при переключении в detached head состояние:

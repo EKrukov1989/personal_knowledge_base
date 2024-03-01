@@ -31,6 +31,12 @@ git clone --single-branch <repository> <directory>
 	fetch = +refs/heads/topic_1:refs/remotes/origin/topic_1
 	fetch = +refs/heads/topic_2:refs/remotes/origin/topic_2
 ```
+В результате для веток `topic_1` и `topic_2` будут созданы remote-tracking ветки. Чтобы создать tracking ветки следует выполнить команды:
+```
+git branch --track topic_1 origin/topic_1
+git branch --track topic_2 origin/topic_2
+```
+
 Теперь будут скачиваться только заданные ветки.
 >[!note]
 >Если не нужно скачивать основную ветку, то можно воспользоваться опцией `--branch` и сразу скачать только нужную ветку.
